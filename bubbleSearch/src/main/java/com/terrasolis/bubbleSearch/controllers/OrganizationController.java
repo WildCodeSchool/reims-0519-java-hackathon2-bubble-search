@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import com.terrasolis.bubbleSearch.entities.Organization;
 import com.terrasolis.bubbleSearch.repositories.OrganizationRepository;
 
 import org.springframework.web.bind.annotation.RestController;
@@ -14,9 +15,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-
-/* Import your repository here */
-/* Import your entity here */
 
 @RestController
 class OrganizationController {
@@ -47,6 +45,6 @@ class OrganizationController {
     public void destroy(@PathVariable Long id) {
         organizationRepository.delete(
             organizationRepository.findById(id).get()
-        ); 
+        );
     }
 }
