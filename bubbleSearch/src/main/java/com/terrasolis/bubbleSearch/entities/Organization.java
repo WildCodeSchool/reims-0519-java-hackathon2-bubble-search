@@ -10,7 +10,7 @@ public class Organization {
     public Organization(){
     }
 
-    public Organization(String name, String mission, String domain, String address, String contact, String website, String typo, String logo, String twiter){
+    public Organization(String name, String mission, String domain, String address, String contact, String website, String typo, String logo, String twitter){
         this.name = name;
         this.mission = mission;
         this.domain = domain;
@@ -19,7 +19,7 @@ public class Organization {
         this.website = website;
 		this.typo = typo;
 		this.logo = logo;
-		this.twiter = twiter;
+		this.twitter = twitter;
     }
 
     @Id
@@ -33,7 +33,7 @@ public class Organization {
     private String website;
 	private String typo;
 	private String logo;
-	private String twiter;
+	private String twitter;
     
 	public Long getId() {
 		return id;
@@ -108,10 +108,10 @@ public class Organization {
 	}
 
 	public String getTwiter() {
-		return twiter;
+		return twitter;
 	}
 
 	public void setTwiter(String twiter) {
-		this.twiter = twiter;
+		this.twitter = twiter;
 	}
 }
