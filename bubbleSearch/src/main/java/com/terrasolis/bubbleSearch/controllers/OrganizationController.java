@@ -7,8 +7,8 @@ import javax.validation.Valid;
 import com.terrasolis.bubbleSearch.entities.Organization;
 import com.terrasolis.bubbleSearch.repositories.OrganizationRepository;
 
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,11 +16,15 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@RestController
+@Controller
 class OrganizationController {
     @Autowired
     private OrganizationRepository organizationRepository;
 
+    @GetMapping("/")
+    public String home() {
+        return "index";
+    }
     @GetMapping("/organizations")
     public List<Organization> browse() {
         return organizationRepository.findAll();
