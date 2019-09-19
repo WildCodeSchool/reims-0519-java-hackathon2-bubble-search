@@ -111,7 +111,7 @@ public class Organization {
 		return twitter;
 	}
 
-	public void setTwiter(String twiter) {
+	public void setTwiter(String twitter) {
 		this.twitter = twitter;
 	}
 }
