@@ -107,11 +107,11 @@ public class Organization {
 		this.logo = logo;
 	}
 
-	public String getTwiter() {
+	public String getTwitter() {
 		return twitter;
 	}
 
-	public void setTwiter(String twitter) {
+	public void setTwitter(String twitter) {
 		this.twitter = twitter;
 	}
 }
