@@ -20,10 +20,22 @@ public class Organization {
 		this.typo = typo;
 		this.logo = logo;
 		this.twitter = twitter;
+	}
+	public Organization(Long id,String name, String mission, String domain, String address, String contact, String website, String typo, String logo, String twitter){
+		this.id = id;
+		this.name = name;
+        this.mission = mission;
+        this.domain = domain;
+        this.address = address;
+        this.contact = contact;
+        this.website = website;
+		this.typo = typo;
+		this.logo = logo;
+		this.twitter = twitter;
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
     private String mission;
@@ -113,5 +125,18 @@ public class Organization {
 
 	public void setTwitter(String twitter) {
 		this.twitter = twitter;
+	}
+
+	public Organization(Long id, String domain) {
+		this.id = id;
+		this.domain = domain;
+	}
+
+	public Organization(Long id) {
+		this.id = id;
+	}
+
+	public Organization(String domain) {
+		this.domain = domain;
 	}
 }
