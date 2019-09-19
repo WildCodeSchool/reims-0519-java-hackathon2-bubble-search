@@ -10,10 +10,13 @@ public class Organization {
     public Organization(){
     }
 
-    public Organization(String name, String mission, String domain){
+    public Organization(String name, String mission, String domain, String address, String contact, String website){
         this.name = name;
         this.mission = mission;
         this.domain = domain;
+        this.address = address;
+        this.contact = contact;
+        this.website = website;
     }
 
     @Id
@@ -22,6 +25,9 @@ public class Organization {
     private String name;
     private String mission;
     private String domain;
+    private String address;
+    private String contact;
+    private String website;
     
 	public Long getId() {
 		return id;
@@ -54,4 +60,29 @@ public class Organization {
 	public void setDomain(String domain) {
 		this.domain = domain;
 	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getContact() {
+		return contact;
+	}
+
+	public void setContact(String contact) {
+		this.contact = contact;
+	}
+
+	public String getWebsite() {
+		return website;
+	}
+
+	public void setWebsite(String website) {
+		this.website = website;
+	}
+    
 }
