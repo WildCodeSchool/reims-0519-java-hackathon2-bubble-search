@@ -113,19 +113,32 @@
                     </div>
                 </div>
             </nav>
-            
-        <div class="twitter col-4">
-            <a class="twitter-timeline" href="https://twitter.com/Vivescia?ref_src=twsrc%5Etfw" data-width="450" data-height="600">Tweets by Vivescia</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
+
+            <div class="twitter col-4">
+                <a class="twitter-timeline" href="https://twitter.com/Vivescia?ref_src=twsrc%5Etfw" data-width="450" data-height="600">Tweets by Vivescia</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
             <div class="jumbotron col-8">
                 <img class="jumb-img" src="http://terrasolis.fr/wp-content/uploads/2017/08/terrasolis-e1504170220736.png" alt="Card image cap">
                 <h1 class="display-4">Cette semaine à l'affiche</h1>
-                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                <hr class="my-4">
-                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                <p class="lead">
-                    <a class="btn btn-charte btn-lg" href="#" role="button">En savoir d'avantage</a>
-                </p>
+                <form action="#" method="get" class="form-example">
+                    <div class="form-example">
+                        <label for="domain">Recherche par domaine: </label>
+                        <select class="custom-select" required>
+                      <option  selected>Sélectionner...</option>
+                      <option
+                          th:each="organization : ${organizations}"
+                          th:text="${organization}"
+                          th:value="${organization}"
+                      >
+                          Option
+                      </option>
+                  </select>
+                    </div>
+                    <div class="form-example">
+                        <input type="submit" value="Rechercher!" class="btn btn-lg btn-secondary">
+                    </div>
+                </form>
             </div>
 
         </div>
@@ -141,12 +154,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
     <script type="text/javascript">
-        $(document).ready(function () {
+        $(document).ready(function() {
             $("#sidebar").mCustomScrollbar({
                 theme: "minimal"
             });
 
-            $('#sidebarCollapse').on('click', function () {
+            $('#sidebarCollapse').on('click', function() {
                 $('#sidebar, #content').toggleClass('active');
                 $('.collapse.in').toggleClass('in');
                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
