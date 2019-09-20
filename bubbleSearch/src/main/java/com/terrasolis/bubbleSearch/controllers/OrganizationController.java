@@ -30,6 +30,7 @@ public class OrganizationController {
         model.addAttribute("organizations", organizations);
         return "index";
     }
+    
     @GetMapping("/organizations")
     public String organizations(Model model) {
         List<Organization> organizations = organizationRepository.findAll();
