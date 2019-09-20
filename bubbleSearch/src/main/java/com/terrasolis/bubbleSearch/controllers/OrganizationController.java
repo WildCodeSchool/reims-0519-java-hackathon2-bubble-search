@@ -24,14 +24,14 @@ public class OrganizationController {
         return "index";
     }
     
-    @GetMapping("/organizations")
+    @GetMapping("/search")
     public String browse(Model model) {
         List<Organization> organizations = organizationRepository.findAll();
         model.addAttribute("organizations", organizations);
         return "search";
     }
 
-    @GetMapping("/organizations/{id}")
+    @GetMapping("/organization/{id}")
     public String read(@PathVariable Long id, Model model) {
     Organization organization = organizationRepository.findById(id).get();
     model.addAttribute("organization", organization);

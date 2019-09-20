@@ -1,16 +1,34 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-  <meta charset="utf-8">
-  <title>Informations</title>
-  <link rel="stylesheet" href="style.css" th:href="@{/css/style.css}">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="script.js"></script>
-</head>
-<body>
-<form th:each="organization : ${organizations}" th:action="@{/organizations/{id}(id = ${organization.id})}" method="GET">
-<button class="favorite styled" type="submit"th:text="${organization.name}" ></button>
-</form>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+<html lang="en">
+    <div th:replace="fragments/head.html :: head"></div>
+    <body class="flex-centered flex-column">
+        <h1>Bubble annuaire</h1>
+        <div class="bubble-container flex-centered">
+            <div class="carousel flex-centered">
+                <a href="/organization/1" class="a bubble flex-centered">
+                    <span>TerraSolis</span>
+                </a>
+                <a href="/organization/2" class="b bubble flex-centered">
+                    <span>CDER</span>
+                </a>
+                <a href="/organization/3" class="c bubble flex-centered">
+                    <span>Enedis</span>
+                </a>
+                <a href="/organization/4" class="d bubble flex-centered">
+                    <span>GRDF</span>
+                </a>
+                <a href="/organization/5" class="e bubble flex-centered">
+                    <span>Cristal Union</span>
+                </a>
+            </div>
+        </div>
+
+        <button class="prev control">
+            <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+        <button class="next control">
+            <ion-icon name="arrow-back"></ion-icon>
+        </button>
+        <div th:replace="fragments/script.html :: script"></div>
+    </body>
 </html>
