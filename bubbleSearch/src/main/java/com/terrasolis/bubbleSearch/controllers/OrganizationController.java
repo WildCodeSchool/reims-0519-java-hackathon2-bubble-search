@@ -27,7 +27,6 @@ public class OrganizationController {
     @GetMapping("/")
     public String home(Model model) {
         List<String> organizations = organizationRepository.findDistinctDomain();
-        System.out.println(organizations+"ici ---------------------");
         model.addAttribute("organizations", organizations);
         return "index";
     }
