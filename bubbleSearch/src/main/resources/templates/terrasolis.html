@@ -1,51 +1,53 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
     <meta charset="utf-8">
     <title>Informations</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/style.css">
+    <link rel="stylesheet" th:href="@{/style.css}" href="../static/style.css">
     <link rel="stylesheet" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css}" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="script.js"></script>
 </head>
+
 <body>
-<div class="container">
-    <div class="d-flex justify-content-center p-5">
-        <img th:src="${organization.logo}" alt="logo" class="border border-dark rounded-circle "/> 
-    </div>
-    <div class="card">
-        <div class="card text-center mb-5">
-            <div class="card-header">
-                <ul class="nav nav-tabs card-header-tabs">
-                    <li class="nav-item">
-                        <h2>Informations</h2>
-                    </li>
-                </ul>
-            </div>
+    <div class="container">
+        <div class="d-flex justify-content-center p-5">
+            <img th:src="${organization.logo}" alt="logo" class="border border-dark rounded-circle " />
         </div>
+        <div class="card">
+            <div class="card text-center mb-5">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <h2>Informations</h2>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div class="card-body">
                 <div>
-                    <p> Nom : <span th:text="${organization.name}"></span></p> 
+                    <p> Nom : <span th:text="${organization.name}"></span></p>
                     <p> Typo : <span th:text="${organization.typo}"></span></p>
                     <p> Mission : <span th:text="${organization.mission}"></span></p>
                     <p> Filiére : <span th:text="${organization.domain}"></span></p>
                     <p> Contact : <span th:text="${organization.contact}"></span></p>
                     <p> Site internet : <a th:href="${organization.website}"> lien vers le site</a></p>
                 </div>
-            </div>        
-        <div class="card text-center">
-            <div class="card-header">
-                <ul class="nav nav-tabs card-header-tabs">
-                    <li class="nav-item">
-                        <h2>où est ce que ça ce situe ?</h2>
-                    </li>
-                </ul>
+            </div>
+            <div class="card text-center">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <h2>où est ce que ça ce situe ?</h2>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+                <iframe th:href="${organization.address}"></iframe>
             </div>
         </div>
-        <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
-           <iframe th:src="${organization.address}"></iframe>
-        </div>
     </div>
-</div>  
-<script th:src="@{https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js}" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script th:src="@{https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js}" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
+
 </html>
