@@ -1,5 +1,7 @@
 package com.terrasolis.bubbleSearch.controllers;
 
+import java.io.ByteArrayOutputStream;
+import java.io.OutputStream;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -30,13 +32,17 @@ public class OrganizationController {
         return "index";
     }
     @GetMapping("/organizations")
-    public List<Organization> browse() {
-        return organizationRepository.findAll();
+    public String organizations(Model model) {
+        List<Organization> organizations = organizationRepository.findAll();
+        model.addAttribute("organizations", organizations);
+        return "search";
     }
 
     @GetMapping("/organizations/{id}")
-    public Organization read(@PathVariable Long id) {
-        return organizationRepository.findById(id).get();
+    public String read(@PathVariable Long id, Model model) {
+    Organization organization = organizationRepository.findById(id).get();
+    model.addAttribute("organization", organization);
+    return "terrasolis";
     }
 
     @PutMapping("/organizations/{id}")
