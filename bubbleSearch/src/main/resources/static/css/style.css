@@ -97,3 +97,9 @@ a:hover {
 .f {
     transform: rotateY(300deg) translateZ(250px);
 }
+
+.rounded-circle {
+    width: 10em;
+    height: 10em;
+    background-image:contain;
+}
