@@ -35,9 +35,9 @@
             <select class="custom-select" required>
               <option  selected>Sélectionner...</option>
               <option
-                  th:each="material : ${materials}"
-                  th:text="${material.domain}"
-                  th:value="${material.id}"
+                  th:each="organization : ${organizations}"
+                  th:text="${organization}"
+                  th:value="${organization}"
               >
                   Option
               </option>

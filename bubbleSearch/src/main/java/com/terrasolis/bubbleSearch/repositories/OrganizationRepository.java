@@ -10,6 +10,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface OrganizationRepository extends JpaRepository<Organization, Long>{
-    @Query(value="SELECT distinct domain from organization " , nativeQuery = true)
-    List<Organization> findAllByDistinctAndByDomain();
+    @Query(value="SELECT domain from organization group by domain" , nativeQuery = true)
+    List<String> findDistinctDomain();
 }
