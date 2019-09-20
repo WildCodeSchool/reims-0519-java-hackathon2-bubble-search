@@ -1,5 +1,7 @@
 package com.terrasolis.bubbleSearch.controllers;
 
+import java.io.ByteArrayOutputStream;
+import java.io.OutputStream;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -22,6 +24,10 @@ class OrganizationController {
     @Autowired
     private OrganizationRepository organizationRepository;
 
+    @GetMapping("/")
+    public String home() {
+        return "index";
+    }
     @GetMapping("/organizations")
     public String organizations(Model model) {
         List<Organization> organizations = organizationRepository.findAll();
