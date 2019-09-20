@@ -20,14 +20,17 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
-class OrganizationController {
+public class OrganizationController {
     @Autowired
     private OrganizationRepository organizationRepository;
 
     @GetMapping("/")
-    public String home() {
+    public String home(Model model) {
+        List<String> organizations = organizationRepository.findDistinctDomain();
+        model.addAttribute("organizations", organizations);
         return "index";
     }
+    
     @GetMapping("/organizations")
     public String organizations(Model model) {
         List<Organization> organizations = organizationRepository.findAll();
