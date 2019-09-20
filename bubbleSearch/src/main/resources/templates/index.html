@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 
@@ -22,7 +21,7 @@
 
 </head>
 
-<body class="Back">
+<body class="background-body">
 
     <div class="wrapper">
         <!-- Sidebar  -->
@@ -34,10 +33,10 @@
             <ul class="list-unstyled components">
                 <p>Bubble Search</p>
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Services    </a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="#"></a>
+                            <a th:href="@{/organizations}">Nos partenaires</a>
                         </li>
                         <li>
                             <a href="#"></a>
@@ -88,7 +87,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
 
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <button type="button" id="sidebarCollapse" class="btn btn-charte">
                         <i class="fas fa-align-left"></i>
                         <span>Toggle Sidebar</span>
                     </button>
@@ -119,13 +118,13 @@
             <a class="twitter-timeline" href="https://twitter.com/Vivescia?ref_src=twsrc%5Etfw" data-width="450" data-height="600">Tweets by Vivescia</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
             <div class="jumbotron col-8">
-                <img class="jumb-img" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d4c0c5d57%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d4c0c5d57%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22106.390625%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image cap">
-                <h1 class="display-4">Hello, world!</h1>
+                <img class="jumb-img" src="http://terrasolis.fr/wp-content/uploads/2017/08/terrasolis-e1504170220736.png" alt="Card image cap">
+                <h1 class="display-4">Cette semaine à l'affiche</h1>
                 <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
                 <hr class="my-4">
                 <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
                 <p class="lead">
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                    <a class="btn btn-charte btn-lg" href="#" role="button">En savoir d'avantage</a>
                 </p>
             </div>
 
@@ -157,47 +156,3 @@
 </body>
 
 </html>
-=======
-
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
-    <title>Cover Template for Bootstrap</title>
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
-
-    <!-- Bootstrap core CSS -->
-    <link href="../css/min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="../css/cover.css" rel="stylesheet">
-    
-  </head>
-
-  <body class="container">
-    <div class="row">
-        <img class="column logoLeft" src="http://terrasolis.fr/wp-content/uploads/2017/08/terrasolis.png" width="" height="" alt="TERRASOLIS Mobile Retina Logo" >
-    </div>
-          <div class="d-flex align-items-baseline">
-            <p class="lead">Entrez en relation avec les acteurs de l'agro insdustrie et faites partis des évenement à ne pas manquer, au coeur de vos régions. </p>
-            
-              <a href="#" class="btn btn-lg btn-secondary">######</a>
-    </div>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
-</html>
->>>>>>> 58e18740c45f49eb7320ba6855724c445748c67b

@@ -1,5 +1,7 @@
 package com.terrasolis.bubbleSearch.controllers;
 
+import java.io.ByteArrayOutputStream;
+import java.io.OutputStream;
 import java.util.List;
 
 import javax.validation.Valid;
