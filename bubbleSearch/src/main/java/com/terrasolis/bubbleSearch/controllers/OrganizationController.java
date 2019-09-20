@@ -22,6 +22,11 @@ class OrganizationController {
     @Autowired
     private OrganizationRepository organizationRepository;
 
+    @GetMapping("/")
+    public String index() {
+        return "index";
+    }
+
     @GetMapping("/organizations")
     public String organizations(Model model) {
         List<Organization> organizations = organizationRepository.findAll();
