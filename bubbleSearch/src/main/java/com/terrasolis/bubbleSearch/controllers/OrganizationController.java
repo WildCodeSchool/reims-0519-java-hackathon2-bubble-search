@@ -23,10 +23,9 @@ class OrganizationController {
     private OrganizationRepository organizationRepository;
 
     @GetMapping("/")
-    public String index() {
+    public String home() {
         return "index";
     }
-
     @GetMapping("/organizations")
     public String organizations(Model model) {
         List<Organization> organizations = organizationRepository.findAll();
