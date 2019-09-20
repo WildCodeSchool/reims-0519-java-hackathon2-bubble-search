@@ -121,7 +121,7 @@
             <div class="jumbotron col-8">
                 <img class="jumb-img" src="http://terrasolis.fr/wp-content/uploads/2017/08/terrasolis-e1504170220736.png" alt="Card image cap">
                 <h1 class="display-4">Cette semaine à l'affiche</h1>
-                <form action="#" method="get" class="form-example">
+                <form th:action="@{/organizations/}" method="get" class="form-example">
                     <div class="form-example">
                         <label for="domain">Recherche par domaine: </label>
                         <select class="custom-select" required>
@@ -140,6 +140,9 @@
                         <input type="submit" value="Rechercher!" class="btn btn-lg btn-secondary">
                     </div>
                 </form>
+                <a>
+                    <p th:each="organization : ${organizations}" th:text="${organization}" th:value="${organization}"></p>
+                </a>
             </div>
 
         </div>
