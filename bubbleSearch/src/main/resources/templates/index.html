@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> =======
 <html>
 
 <head>
@@ -125,15 +125,16 @@
                     <div class="form-example">
                         <label for="domain">Recherche par domaine: </label>
                         <select class="custom-select" required>
-                      <option  selected>Sélectionner...</option>
-                      <option
-                          th:each="organization : ${organizations}"
-                          th:text="${organization}"
-                          th:value="${organization}"
-                      >
-                          Option
-                      </option>
-                  </select>
+                          <option  selected>Sélectionner...</option>
+                          <option
+                              th:each="organization : ${organizations}"
+                              th:text="${organization}"
+                              th:value="${organization}"
+                          >
+                              Option
+                          </option>
+                      </select>
+
                     </div>
                     <div class="form-example">
                         <input type="submit" value="Rechercher!" class="btn btn-lg btn-secondary">
